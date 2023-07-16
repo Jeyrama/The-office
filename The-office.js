@@ -20,3 +20,21 @@ function outed(meet, boss) {
 }
 
 // or
+
+function outed(meet, boss){
+
+  let totalHappyness = 0
+  
+  for (item in meet){
+    if (item === boss) {
+      totalHappyness += (meet[item] *2) 
+    } else { totalHappyness += meet[item]}
+  }
+  let averageHappyness = totalHappyness / Object.keys(meet).length 
+  
+  
+  if (averageHappyness <= 5) {
+    return "Get Out Now!"
+  } else {return "Nice Work Champ!"}
+   
+}
